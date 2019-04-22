@@ -1,4 +1,4 @@
-var app = angular.module('myApp',[]);
+
 app.controller('myController',['$http',function($http){
     console.log('111');
   var self = this;
