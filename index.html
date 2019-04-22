@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <title>JS Bin</title>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myController as myCtrl">
+    <table class="table table-striped">
+    <thead>
+    <tr> 
+        <th scope="col">Id</th>
+        <th scope="col">SendDate</th>
+        <th scope="col">IsRead</th>
+    </tr>
+    </thead>
+    <tbody ng-repeat="data in myCtrl.data">
+        <tr>  
+        <td>{{data.Id}}</td>
+        <td>{{data.SendDate}}</td>
+        <td>{{data.IsRead}}</td>
+        </tr>
+    </tbody>
+    </table>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</table>
+</div>
+</body>
+</html>
