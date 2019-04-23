@@ -1,15 +1,18 @@
+
 app.controller("myController", [
   "$http",
-  function($http) {
-    console.log("111");
-    var self = this;
-    self.url = "https://next.json-generator.com/api/json/get/EJuTb6mO8";
-    $http({
-      method: "GET",
-      url: self.url
-    }).then(
+  "myService",
+  function($http, myService) {
+    // console.log(this,'the myCtrl this')
+    var self= this;
+    // console.log(self,'assign self to this')
+    // self.aa = 'aa'
+    // console.log(self,'assign another key&value to self')
+    // console.log(self,'Now the myCtrl have nothing&aa')
+    myService.getEvenInfo().then(
       function(response) {
-        self.data = response.data.InboxMailList;
+      // console.log(this,'the myService'sgetEvenInfo this')
+        self.data = response.data.InboxMailList;//get the myCtrl this
         //true
         console.log(self.data);
       },
