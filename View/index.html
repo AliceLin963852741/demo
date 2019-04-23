@@ -8,7 +8,7 @@
         content="width=device-width"
     >
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
-
+    <link rel="stylesheet" href="../Content/Views/index.css">
     <title>Demo</title>
 </head>
 
@@ -32,14 +32,15 @@
                 <tr>
                     <td>{{data.Id}}</td>
                     <td>{{data.Sender}}</td>
-                    <td><directive-tooltip></directive-tooltip></td>
-                    <td>{{data.SendDate}}</td>
+                    <td><directive-tooltip></directive-tooltip></td>                    
+                    <td>{{ data.SendDate}}</td>
                 </tr>
             </tbody>
         </table>
         <script src="../myApp.js"></script>
         <script src="../Script/ctrls/myCtrl.js"></script>
         <script src="../Script/service/myService.js"></script>
+        <!-- <script src="../Script/filter/date.js"></script> -->
         <script src="../Script/directive/directiveTooltip.js"></script>
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery.min.js"></script>

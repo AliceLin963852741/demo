@@ -14,7 +14,7 @@ app.controller("myController", [
       // console.log(this,'the myService.sgetEvenInfo this');
         self.data = response.data.InboxMailList;//get the myCtrl this
         //true
-        console.log(self.data,'self.data,這個就變成myCtrl裏的{}');
+        // console.log(self.data,'self.data,這個就變成myCtrl裏的{}');
       },
       function(response) {
         //false
