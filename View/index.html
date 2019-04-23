@@ -27,11 +27,12 @@
                 </tr>
             </thead>
             <!-- {{myCtrl}} -->
+            
             <tbody ng-repeat="data in myCtrl.data">
                 <tr>
                     <td>{{data.Id}}</td>
                     <td>{{data.Sender}}</td>
-                    <td>{{data.Subject}}</td>
+                    <td><directive-tooltip></directive-tooltip></td>
                     <td>{{data.SendDate}}</td>
                 </tr>
             </tbody>
@@ -39,6 +40,7 @@
         <script src="../myApp.js"></script>
         <script src="../Script/ctrls/myCtrl.js"></script>
         <script src="../Script/service/myService.js"></script>
+        <script src="../Script/directive/directiveTooltip.js"></script>
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <link
