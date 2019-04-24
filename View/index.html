@@ -8,7 +8,7 @@
         content="width=device-width"
     >
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
-    <!-- <link rel="stylesheet" href="../Content/Views/index.css"> -->
+    
     <title>Demo</title>
 </head>
 
@@ -34,7 +34,7 @@
                     <td>{{data.Id}}</td>
                     <td>{{data.Sender}}</td>
                     <td><span directive-tooltip settext="{{data.Subject}}" demo="123">{{data.Subject}}</span></td>                
-                    <td>{{ data.SendDate | date}}</td>
+                    <td>{{ data.SendDate | date }}</td>
                     <td>{{88 | currency : '$'}}</td>
                 </tr>
             </tbody>
@@ -53,6 +53,7 @@
             type="text/css"
         />
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"></script>    
         </table>
     </div>
 </body>

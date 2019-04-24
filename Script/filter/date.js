@@ -1,10 +1,7 @@
-app.filter("data",function () {
+app.filter('date',function () {
     console.log('123')
-    var self = this;
-    self.Dtime = new Date().getTime();
-    // return function (jsonDate) {
-    //     if (!jsonDate)
-    //         return "";
-    //     return moment(jsonDate).format('YYYY/MM/DD (dd) HH:mm:ss');
-    // };
+    return function (date) {
+
+        console.log(date,'c c c ')
+    };
 });
