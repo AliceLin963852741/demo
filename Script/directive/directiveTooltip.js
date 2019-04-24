@@ -2,7 +2,11 @@
 app.directive('directiveTooltip', function(){
     return {
         restrict: 'E',
-        // template:'<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="{{data.Subject}}">{{data.Subject}}</button>'
-        template:'<button type="button" class="btn btn-default bgtn" >{{data.Subject}}<span class="bgtx">{{data.Subject}}</span></button>'
+        template:'<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="{{data.Subject}}">{{data.Subject}}</button>',
+        // <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="i am new text">i am new buttom</button>
+        link:function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        }
+        
     }
 });
