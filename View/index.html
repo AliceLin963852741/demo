@@ -17,14 +17,6 @@
         ng-app="myApp"
         ng-controller="myController as myCtrl"
     >
-    <button type="button" class="tooltip-show" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
-    <button type="button" class="tooltip-hide" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
-    <button type="button" class="tooltip-destroy" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
-    <button type="button" class="tooltip-toggle" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-    <button type="button" class="tooltip-options" data-toggle="tooltip" data-placement="right" title="<h2>am Header2</h2>">Tooltip 方法 options</button>
-    <div>123</div>
-    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="i am new text">i am new buttom</button>
-    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="i am new buttom2">i am new buttom2</button>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -32,6 +24,7 @@
                     <th scope="col">Sender</th>
                     <th scope="col">Subject</th>
                     <th scope="col">SendDate</th>
+                    <th>練習金額</th>
                 </tr>
             </thead>
             <!-- {{myCtrl}} -->
@@ -40,8 +33,9 @@
                 <tr>
                     <td>{{data.Id}}</td>
                     <td>{{data.Sender}}</td>
-                    <td><directive-tooltip></directive-tooltip></td>                    
+                    <td><span directive-tooltip settext="{{data.Subject}}" demo="123">{{data.Subject}}</span></td>                
                     <td>{{ data.SendDate | date}}</td>
+                    <td>88</td>
                 </tr>
             </tbody>
         </table>
@@ -59,19 +53,6 @@
             type="text/css"
         />
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script>
-            $(function () { $('.tooltip-show').tooltip('show');});
-            // $(function () { $('.tooltip-show').on('show.bs.tooltip', function () {
-	        //     alert("Alert message on show");
-            // })});
-            $(function () { $('.tooltip-hide').tooltip('hide');});
-            $(function () { $('.tooltip-destroy').tooltip('destroy');});
-            $(function () { $('.tooltip-toggle').tooltip('toggle');});
-            $(function () { $(".tooltip-options").tooltip({html : true });});
-            $(function(){
-				$('[data-toggle="tooltip"]').tooltip();
-			});
-        </script>
         </table>
     </div>
 </body>
