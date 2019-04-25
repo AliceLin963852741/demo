@@ -1,5 +1,5 @@
 app.filter('date',function () {
-    console.log('123')
+    // console.log('123')
     return function (date) {
         // console.log(date,'index data')
         // console.log(typeof(date))
@@ -11,7 +11,7 @@ app.filter('date',function () {
         // console.log(c,'c')
         d =  moment(c)._i;
         //console.log(moment(c)._i,'moment(c)')
-        console.log(d,'d')
+        // console.log(d,'d')
         dataDate = Number(d)
         // console.log(dataDate,'dataDate')
         // console.log(typeof(dataDate),'typeof(dataDate)')
@@ -24,7 +24,7 @@ app.filter('date',function () {
         oDay = oDate.getDate();
         // console.log(oDay,'oDay')
         oTime = oYear + '/' + oMonth + '/' + oDay;
-        console.log(oTime,'oTime');
+        // console.log(oTime,'oTime');
         return oTime;
     };
 });
