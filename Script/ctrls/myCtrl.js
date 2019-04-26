@@ -3,23 +3,36 @@ app.controller("myController", [
   "$http",
   "myService",
   function($http, myService) {
-    // console.log(this,'the myCtrl this')
     var self= this;
-    // console.log(self,'assign self to this')
-    self.aa = 'aa'
-    // console.log(self,'assign another key&value to self')
-    // console.log(self,'Now the myCtrl have nothing&aa')
+    console.log(self,'self')
     myService.getEvenInfo().then(
       function(response) {
-      // console.log(this,'the myService.sgetEvenInfo this');
-        self.data = response.data.InboxMailList;//get the myCtrl this
+        self.data = response.data.InboxMailList;
+        for(i=0;i<self.data.length;i++){
+            self.data[i].Selected = false;
+            self.data[i].count = 0;
+        }
         //true
-        // console.log(self.data,'self.data,這個就變成myCtrl裏的{}');
       },
       function(response) {
         //false
         console.log("error");
       }
     );
+
+    // this.Selected = 0;
+    this.change = function(){
+      for(i=0;i<self.data.length;i++){
+        // console.log(self.data,'self.data[i]')
+        if(self.data[i].Selected ==true){
+          self.data[i].count ++
+          // console.log(self.data[i].count,"this.Selected");
+          if(self.data[i].count ==self.data.length){
+            console.log('456')
+          }
+        }
+      }
+      
+    }
   }
 ]);

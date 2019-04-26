@@ -17,10 +17,11 @@
         ng-app="myApp"
         ng-controller="myController as myCtrl"
     >
-        <table class="table table-striped" ng-controller="changeCtrl">
+        <table class="table table-striped">
+                <!-- ng-controller="changeCtrl" -->
             <thead>
                 <tr>
-                    <th scope="col"><input type="checkbox" id="myCheck" ng-model="confirmed" >Id</th>
+                    <th scope="col"><input type="checkbox" id="myCheck" ng-model="data.Selected">Id</th>
                     <th scope="col">Sender</th>
                     <th scope="col">Subject</th>
                     <th scope="col">SendDate</th>
@@ -31,7 +32,7 @@
             
             <tbody  ng-repeat="data in myCtrl.data">
                 <tr>
-                    <td><input type="checkbox" id="myChecktest" ng-model="confirmed" ng-change="change()">{{data.Id}}.confirmed:{{confirmed}}.counter:{{counter}} </td>
+                    <td><input type="checkbox" id="myChecktest" ng-model="data.Selected" ng-change="myCtrl.change()">{{data.Id}}.Selected:{{data.Selected}}</td>
                     <td>{{data.Sender}}</td>
                     <td><span directive-tooltip settext="{{data.Subject}}" demo="123">{{data.Subject}}</span></td>                
                     <td>{{ data.SendDate | date }}</td>
@@ -41,7 +42,7 @@
         </table>
         <script src="../myApp.js"></script>
         <script src="../Script/ctrls/myCtrl.js"></script>
-        <script src="../Script/ctrls/changeCtrl.js"></script>
+        <!-- <script src="../Script/ctrls/changeCtrl.js"></script> -->
         <script src="../Script/service/myService.js"></script>
         <script src="../Script/filter/date.js"></script>
         <script src="../Script/directive/directiveTooltip.js"></script>
