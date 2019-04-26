@@ -40,12 +40,10 @@ app.controller("myController", [
     this.changeTitle = function(){
       if(this.Selected == true){
         for(i=0;i<self.data.length;i++){
-          // console.log(self.data,'self.data[i]')
           self.data[i].Selected = true;  
         }
       }else{
         for(i=0;i<self.data.length;i++){
-          // console.log(self.data,'self.data[i]')
           self.data[i].Selected = false;  
         }
       }
