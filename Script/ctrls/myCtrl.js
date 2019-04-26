@@ -19,20 +19,36 @@ app.controller("myController", [
         console.log("error");
       }
     );
-
+    this.Selected= false;
     // this.Selected = 0;
     this.change = function(){
+      self.count=0;
       for(i=0;i<self.data.length;i++){
         // console.log(self.data,'self.data[i]')
         if(self.data[i].Selected ==true){
-          self.data[i].count ++
-          // console.log(self.data[i].count,"this.Selected");
-          if(self.data[i].count ==self.data.length){
-            console.log('456')
-          }
+          console.log(self.data[i].count,' self.data[i].count');
+          self.count++
+        console.log(self.count,'self.count++')
+        if(self.count==self.data.length){
+          this.Selected= true;
+        }else {
+          this.Selected= false;
+        }
         }
       }
-      
+    };
+    this.changeTitle = function(){
+      if(this.Selected == true){
+        for(i=0;i<self.data.length;i++){
+          // console.log(self.data,'self.data[i]')
+          self.data[i].Selected = true;  
+        }
+      }else{
+        for(i=0;i<self.data.length;i++){
+          // console.log(self.data,'self.data[i]')
+          self.data[i].Selected = false;  
+        }
+      }
     }
   }
 ]);

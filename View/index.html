@@ -21,7 +21,7 @@
                 <!-- ng-controller="changeCtrl" -->
             <thead>
                 <tr>
-                    <th scope="col"><input type="checkbox" id="myCheck" ng-model="data.Selected">Id</th>
+                    <th scope="col"><input type="checkbox" id="myCheck" ng-model="myCtrl.Selected" ng-change="myCtrl.changeTitle()">Id</th>
                     <th scope="col">Sender</th>
                     <th scope="col">Subject</th>
                     <th scope="col">SendDate</th>
