@@ -34,3 +34,6 @@
     border-style: solid;
     border-color: transparent black transparent transparent;
 }
+#carouselExampleIndicators .carousel-inner .carousel-item img {
+    width: -webkit-fill-available;
+}
